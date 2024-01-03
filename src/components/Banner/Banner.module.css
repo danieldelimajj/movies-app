@@ -1,0 +1,10 @@
+.banner {
+    width: 100%;
+    height: 350px;
+    top: 0;
+   /* background-image: url('/public/images/banner-home.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 78px;
+}

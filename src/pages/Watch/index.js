@@ -9,7 +9,7 @@ import PageNotFound from "../PageNotFound";
 function Watch() {
     const params = useParams()
     const video = videos.find((video) => { return video.id === params.id})
-    if(!video) { return <PageNotFound />}
+    if(!video) { return <PageNotFound />} //Se o vídeo não existir, retornar a página "PÁGINA NÃO ENCONTRADA"
     return(
         <>
             <Header />

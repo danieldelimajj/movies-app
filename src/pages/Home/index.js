@@ -11,11 +11,12 @@ function Home() {
       <Header />
       <Banner />
       <Container>
+
           { categories.map((category, index) => 
               <Category category={category}>
                 { filterCategory(index).map((video) => <Card id={video.id} key={video.id} /> )}
               </Category>
-          )} 
+          )}  
       </Container>
       <Footer />
     </>

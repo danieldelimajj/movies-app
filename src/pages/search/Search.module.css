@@ -3,6 +3,7 @@
     align-items: center;
     flex-direction: column;
     padding-top: 68px;
+    min-height: 600px;
 }
 
 .search h2 {

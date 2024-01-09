@@ -3,7 +3,7 @@ import VideoList from "../VideoList";
 import styles from "./SearchVideoList.module.css";
 
 
-//Filtering video by category or title
+//Filtrando o video pelo titulo ou categoria 
 function filterVideos(videos, searchText) {
     return videos.filter((video) => video.category.includes(searchText) || video.title.includes(searchText))
 }

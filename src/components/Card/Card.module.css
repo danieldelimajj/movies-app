@@ -1,9 +1,14 @@
 .card {
     display: flex;
-    
 }
 
 .card img{
-    
+    width: 230px;
+    border-radius: 8px;
+}
+
+.card img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 10px #222;
     border-radius: 10px;
 }

@@ -7,6 +7,7 @@
     width: 100%;
     height: 80px;
     border-bottom: 2px solid #f44336;
+    z-index: 9999;
 }
 
 .header span {

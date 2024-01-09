@@ -1,13 +1,18 @@
 .category {
     display: flex;
     flex-direction: column;
+    min-width: 280px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.category section {
+.category div {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
+    height: 150px;
 }
 
 .category h2 {

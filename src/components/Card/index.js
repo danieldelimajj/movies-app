@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import styles from './Card.module.css';
 import iconFavorite from './favorite.png';
 import iconUnFavorite from './unfavorite.png';
+import { useFavoriteContext } from '../../contexts/Favorites';
 
 function Card({ id }) {
+    const { favorite, addFavorite } = useFavoriteContext()
     return (
         <section className={styles.card}>
             <Link to={`/watch/${id}`}>

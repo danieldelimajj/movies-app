@@ -6,13 +6,15 @@ import { useFavoriteContext } from '../../contexts/Favorites';
 
 function Card({ id }) {
     const { favorite, addFavorite } = useFavoriteContext()
+    const isFavorite = favorite.some((fav) => fav.id === id)
+    const icone = !isFavorite ? iconFavorite : iconUnFavorite
     return (
         <section className={styles.card}>
             <Link to={`/watch/${id}`}>
                 <img src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`} alt="Capa" className={styles.cover}/>
             </Link>
             <figure className={styles.icon}>
-                <img src={iconFavorite} 
+                <img src={icone} 
                 alt='Favorite Icon'
                 onClick={() => addFavorite({id})}
                 />

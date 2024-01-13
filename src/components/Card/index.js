@@ -12,7 +12,10 @@ function Card({ id }) {
                 <img src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`} alt="Capa" className={styles.cover}/>
             </Link>
             <figure className={styles.icon}>
-                <img src={iconFavorite} alt='Favorite Icon'></img>
+                <img src={iconFavorite} 
+                alt='Favorite Icon'
+                onClick={() => addFavorite({id})}
+                />
             </figure>
         </section>
     );

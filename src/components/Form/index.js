@@ -15,7 +15,10 @@ function Form() {
         //guardar a URL e a categoria
         const newVideo = {url, category}
         setVideos([...videos, newVideo])
-        console.log(videos)
+        localStorage.setItem('videos', JSON.stringify([...videos, newVideo]))
+        //limpar o form
+        setUrl('')
+        setCategory('')
     }
 
     return(

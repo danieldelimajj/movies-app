@@ -1,7 +1,11 @@
 import styles from './Form.module.css';
 import {categories} from '../Category';
+import { useState } from 'react';
 
 function Form() {
+
+    const [url, setUrl] = useState('')
+
     return(
         <section className={styles.container}>
             <h2>Cadastro de vídeo</h2>
@@ -12,6 +16,8 @@ function Form() {
                         type="text"
                         placeholder="Digite a URL do vídeo"
                         required="required"
+                        value={url}
+                        onChange={e => setUrl(e.target.value)}
                     />
                 </div>
                 <div>

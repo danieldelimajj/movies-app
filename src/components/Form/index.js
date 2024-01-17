@@ -5,11 +5,23 @@ import { useState } from 'react';
 function Form() {
 
     const [url, setUrl] = useState('')
+    const [category, setCategory] = useState('')
+    const [videos, setVideos] = useState([])
+    const [errors, setErrors] = useState('')
+    
+    function onSave(e) {
+        e.preventDefault() 
+        console.log(url, category)
+        //guardar a URL e a categoria
+        const newVideo = {url, category}
+        setVideos([...videos, newVideo])
+        console.log(videos)
+    }
 
     return(
         <section className={styles.container}>
             <h2>Cadastro de vídeo</h2>
-            <form>
+            <form onSubmit={onSave}>
                 <div>
                     <label>URL do vídeo</label>
                     <input 
@@ -22,7 +34,11 @@ function Form() {
                 </div>
                 <div>
                     <label>Categoria</label>
-                    <select>
+                    <select
+                        required="required"
+                        value={category}
+                        onChange={e => setCategory(e.target.value)}
+                    >
                         <option value="-">Selecione uma categoria</option>
                         { categories.map(item => {
                             return <option value={item}>{item}</option>

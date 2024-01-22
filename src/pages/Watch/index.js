@@ -5,6 +5,7 @@ import styles from "./Watch.module.css"
 import { useParams } from "react-router-dom";
 import videos from "../../json/videos.json";
 import PageNotFound from "../PageNotFound";
+import ScrollToTopButton from "../../components/ScrollToTopButton";
 
 function Watch() {
     const params = useParams()
@@ -12,6 +13,7 @@ function Watch() {
     if(!video) { return <PageNotFound />} //Se o vídeo não existir, retornar a página "PÁGINA NÃO ENCONTRADA"
     return(
         <>
+            <ScrollToTopButton />
             <Header />
             <Container>
                 <section className={styles.watch}>

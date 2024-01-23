@@ -12,6 +12,14 @@
 
 .footer h2 {
     font-weight: 500;
-    font-size: 1.1rem;
-    padding-block: 1rem;
+    font-size: 1.2rem;
+    padding-block: 1.1rem;
+    
 }
+
+@media (max-width: 480px) {
+    .footer h2 {
+        font-size: 0.8rem;
+    }
+}
+
